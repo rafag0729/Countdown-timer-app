@@ -1,0 +1,30 @@
+$font-stack: 'Red Hat Text', sans-serif;
+/*
+-- PRIMARY COLOR
+- Grayish blue: hsl(237, 18%, 59%)
+- Soft red: hsl(345, 95%, 68%)
+
+-- NEUTRAL COLOR
+- White: hsl(0, 0%, 100%)
+- Dark desaturated blue: hsl(236, 21%, 26%)
+- Very dark blue: hsl(235, 16%, 14%)
+- Very dark (mostly black) blue: hsl(234, 17%, 12%)
+*/
+
+$primary-color: hsl(237, 18%, 59%);
+$secondary-color: hsl(345, 95%, 68%);
+
+$white: hsl(0, 0%, 100%);
+$dark-desaturated-blue: hsl(236, 21%, 26%);
+$dark-blue: hsl(235, 16%, 14%);
+$darker-blue: hsl(234, 17%, 12%);
+
+%arrows_timer{
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    background-color: $secondary-color;
+    clip-path: polygon(0 100%, 100% 100%, 50% 0);
+}

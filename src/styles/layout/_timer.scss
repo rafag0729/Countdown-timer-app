@@ -1,0 +1,107 @@
+@import '../base';
+@import '../components';    
+
+h1{ 
+    @extend %header1;
+    margin: 0 auto;
+    margin-top: 4em;
+    color: $white;  
+}
+
+.timer{
+    border: 2px solid green;
+
+    .timer_cards{
+        min-height: 200px;
+        width: 100%;
+        padding-top: 4em;
+        border: 2px solid red
+    }
+
+    .timer_cards > p{
+        display: inline-block;
+        position: relative;
+        width: 22%;
+        max-width: 200px;
+        height: auto;
+        padding: 10px;
+        margin: 0 1%;
+        background-color: $dark-desaturated-blue;
+        box-shadow: 0 6px 7px 0 black;
+        font-size: 4rem;
+        font-weight: 700;
+        text-shadow: 0px 1px 7px black;
+        color: $secondary-color;
+
+        ::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    }
+
+    .timer_cards span{
+        display: block;
+        width: 100%;
+        position: absolute;
+        bottom: -2em;
+        font-size: .8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: $primary-color;
+    }
+}
+
+@media screen and (max-width: 425px){
+
+    h1{
+        width: 100%;
+    }
+
+    .timer_cards{
+        
+        > p{
+            height: 4em;
+            border-radius: 9%;
+        }
+    }
+}
+
+@media screen and (min-width: 426px){
+
+    h1{
+        max-width: 16em;
+    }
+
+    .timer_cards{
+
+        > p{
+            height: 6em;
+            border-radius: 6%;
+        }
+    }
+
+    @media screen and (min-width: 768px){
+        
+        .timer_cards{
+        
+            > p {
+                height: 9em;
+            }
+        }
+
+        @media screen and (min-width: 1024px){
+
+            .timer_cards{
+        
+                > p {
+                    height: 10em;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@import '../base';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./../../assets/bg-stars.svg), linear-gradient(to bottom, $darker-blue, $dark-blue);
+    font-family: $font-stack;
+    text-align: center;
+}
+
+.container{ 
+    margin: 0 auto;
+    width: 80%;
+    position: relative;
+}
+
+@media screen and (max-width: 425px){
+
+    html{
+        font-size: 90%;
+    }
+}
+
+@media screen and (min-width: 426px){
+
+    html{
+        font-size: 130%;
+    }
+}
