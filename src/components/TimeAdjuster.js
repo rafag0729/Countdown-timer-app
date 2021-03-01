@@ -7,21 +7,23 @@ export const TimeAdjuster = () => {
             <h3>PLEASE SET THE TIMER</h3>
 
             <div className="time_set"> 
-                <div>
-                    <input type="number" name="days" placeholder="--"/> D
-                </div>
+                <form>
+                    <div>
+                        <input type="number" name="days" placeholder="--"/> D
+                    </div>
 
-                <div>
-                    <input type="number" name="hours"  placeholder="--"/> H
-                </div>
+                    <div>
+                        <input type="number" name="hours"  placeholder="--"/> H
+                    </div>
 
-                <div>
-                    <input type="number" name="minutes"  placeholder="--"/> M
-                </div>
+                    <div>
+                        <input type="number" name="minutes"  placeholder="--"/> M
+                    </div>
 
-                <div>
-                    <input type="number" name="seconds"  placeholder="--" v/> S
-                </div>
+                    <div>
+                        <input type="number" name="seconds"  placeholder="--"/> S
+                    </div>
+                </form>
             </div>
 
             <div className="time_options">

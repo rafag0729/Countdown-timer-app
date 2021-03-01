@@ -5,6 +5,146 @@
     text-transform: uppercase;
 }
 
-.social_media_links{
+/* TIME CARDS */
+
+.timer{
+
+    .timer_cards{
+        display: flex;
+        justify-content: space-between;
+        min-height: 200px;
+        width: 100%;
+        padding-top: 3em;
+
+        perspective: 600px;
+    }
+
+    .timer_cards > li{
+        display: inline-block;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        background-color: $dark-desaturated-blue;
+        border-radius: 10px;
+        box-shadow: 0 7px 0 0 $darker-blue;
+
+        box-sizing: content-box;
+
+        :hover{
+            
+            .card_top{
+                transform: rotateX(180deg);
+            }
+
+            
+            .card_bottom{
+                transform: rotateX(0deg);
+            }
+        }
+
+        .card_top,
+        .card_bottom,
+        .card_top_back,
+        .card_bottom_back{
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+            height: 50%;
+        }
+
+        .card_top,
+        .card_bottom{
+            z-index: 10;
+        }
+
+        .card_top{
+            top: 0;
+            border-radius: 10px 10px 0 0;
+            background-color: $dark-desaturated-blue;
+            
+            backface-visibility: hidden;
+            transform-origin: 50% 100%;
+            transform: rotateX(0deg);
+            transition: all .5s ease-in;
+        }
+
+        .card_top::after, .card_top_back::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px 10px 0 0;
+            background-color: rgba(0, 0, 0, .3);
+        }
+
+        .card_bottom, .card_bottom_back{
+            overflow: hidden;
+            bottom: 0;
+            background-color: $dark-desaturated-blue;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .card_bottom{
+            overflow: hidden;
+            
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+            transform-origin: 50% 0%;
+            transform: rotateX(-180deg);
+            transition: all .5s linear;
+        }
+
+        .card_top p, .card_top_back p{
+            margin-top: 41px;
+        }
+
+        .card_bottom p, .card_bottom_back p{
+            margin-top: -33px;
+        }
+
+        p{  
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 700;
+            color: $secondary-color;
+        }
+
+        span{
+            position: absolute;
+            bottom: -30px;
+            right: 0;
+            width: 100%;
+            font-size: .6rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: $primary-color;
+        }
+    }
+
+    .timer_cards > li::before{
+        content: "";
+        position: absolute;
+        top: 46.5%;
+        left: -5px;
+        z-index: 50;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $darker-blue;
+    }
+
+    .timer_cards > li::after{
+        content: "";
+        position: absolute;
+        top: 46.5%;
+        right: -5px;
+        z-index: 50;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $darker-blue;
+    }
 
 }
